@@ -21,7 +21,7 @@ function Loginpage() {
  <Logo/>
  </div>
 
-<div className='w-2/3 flex flex-col flex-auto  mx-auto  h-screen'>
+<div className='w-2/3 flex flex-col flex-auto  mx-auto  h-screen '>
 
 <Routes>
 
