@@ -1,16 +1,13 @@
-import logo from './logo.svg';
-import Loginpage from "./Pages/Loginpage"
 import {Link,Routes,Route} from "react-router-dom"
-import Newlogin from './Pages/Newlogin';
-import Profile from './Pages/Profile';
-import Admin from './Pages/Admin';
+import Profile from './pages/Profile';
+import Admin from './pages/Admin';
+import Loginpage from './pages/Loginpage';
 function App() {
   return (
-    <Profile/>
+    // <Profile/>
     // <Admin/>
-// {/* <Sidebar/> */}
-    // {/* <Loginpage/> */}
-
+    // <Sidebar/> 
+    <Loginpage/> 
   );
 }
 
