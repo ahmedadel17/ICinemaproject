@@ -10,7 +10,7 @@ import Logo from "../components/Logo";
 function Loginpage() {
   return (
     <section className="bg-white dark:bg-dark">
-      <div className="flex flex-auto ">
+      <div className="flex flex-auto">
         <div className="w-1/2 pl-16 pr-24 pt-16 hidden flex-col items-center lg:flex">
           <Logo />
 

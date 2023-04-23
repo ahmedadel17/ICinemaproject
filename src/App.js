@@ -4,10 +4,10 @@ import Admin from './pages/Admin';
 import Loginpage from './pages/Loginpage';
 function App() {
   return (
-    // <Profile/>
+    <Profile/>
     // <Admin/>
     // <Sidebar/> 
-    <Loginpage/> 
+    // <Loginpage/> 
   );
 }
 
