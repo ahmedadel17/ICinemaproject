@@ -1,13 +1,13 @@
 import hero from "../assets/images/hero.svg";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 
 import SwitchBtns from "../components/SwitchBtns";
 import LoginForm from "../components/LoginForm";
 import SignupForm from "../components/SignupForm";
 import Logo from "../components/Logo";
 
-function Loginpage() {
+function AuthLayout() {
   return (
     <section className="bg-white dark:bg-dark">
       <div className="flex flex-auto">
@@ -27,10 +27,7 @@ function Loginpage() {
             <div className="relative h-full px-4 pt-16 pb-10 bg-lightGray rounded-xl dark:bg-darkGray md:px-16">
               <SwitchBtns />
 
-              <Routes>
-                <Route path="/" exact element={<LoginForm />} />
-                <Route path="/signup" exact element={<SignupForm />} />
-              </Routes>
+              <Outlet />
             </div>
           </div>
         </div>
@@ -39,4 +36,4 @@ function Loginpage() {
   );
 }
 
-export default Loginpage;
+export default AuthLayout;

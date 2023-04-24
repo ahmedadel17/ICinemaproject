@@ -1,9 +1,8 @@
-import React from "react";
 import Button from "../components/Button";
 
 function Createuser(props) {
   return (
-    <div className="flex border h-196px mt-5">
+    <div className="flex border mt-5">
       <img
         src="https://img.freepik.com/free-vector/social-biography-concept-illustration_114360-7181.jpg?size=626&ext=jpg&ga=GA1.2.80988938.1676138881&semt=ais"
         alt="desciption image"
@@ -13,14 +12,15 @@ function Createuser(props) {
         <h1 className="text-lg font-bold">{props.name}</h1>
         <h2 className="mt-2">{props.description}</h2>
 
-        <div className="flex mt-5 relative">
-          <div className="mb-6 mx-5">
+        <div className="flex mt-5">
+          <div className="mx-5">
             <label
               for="email"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Create user
             </label>
+
             <input
               type="email"
               id="email"
@@ -30,7 +30,7 @@ function Createuser(props) {
             />
           </div>
 
-          <div className="mb-6 w-96 mx-5">
+          <div className="w-96 mx-5">
             <label
               for="password"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -45,9 +45,9 @@ function Createuser(props) {
             />
           </div>
 
-          <Button className="bg-yellow-400 text-lg w-44 h-10 rounded-lg mt-7 absolute right-20 ">
+          <button className="bg-primary text-lg rounded-lg">
             Save
-          </Button>
+          </button>
         </div>
       </div>
     </div>
