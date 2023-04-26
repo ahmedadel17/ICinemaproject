@@ -7,7 +7,7 @@ const RootLayout = () => {
     <main>
       <Sidebar />
 
-      <section className="p-8 lg:ml-64">
+      <section className="p-8 bg-lightGray lg:ml-64 dark:bg-darkGray">
         <Outlet />
       </section>
     </main>

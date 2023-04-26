@@ -9,7 +9,7 @@ import {
   timelineIcon,
 } from "../assets";
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setAsideBar } from "../app/reducers/appSlice";
 
@@ -108,7 +108,7 @@ function Sidebar() {
                 />
 
                 <span className="font-light text-lg text-dark capitalize group-active:text-dark dark:text-white group-[]:dark:text-dark">
-                  boking
+                  booking
                 </span>
               </NavLink>
             </li>
@@ -157,7 +157,7 @@ function Sidebar() {
           </ul>
         </div>
 
-        <a href="#" className="flex items-center relative py-2.5 px-12">
+        <Link to="auth/login" className="flex items-center relative py-2.5 px-12">
           <img
             src={logOutIcon}
             alt="admin icon"
@@ -167,7 +167,7 @@ function Sidebar() {
           <span className="font-light text-lg text-dark capitalize dark:text-white">
             Sign out
           </span>
-        </a>
+        </Link>
       </div>
 
       <a

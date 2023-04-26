@@ -4,7 +4,7 @@ import Createuser from "../components/Createuser";
 function Admin() {
   return (
     <div>
-      <Controltop />
+      <Controltop entry='user' />
 
       <h1 className="mt-10 text-lg">
         You have several admins to control your system perfectly:
