@@ -4,10 +4,10 @@ import { Outlet } from 'react-router-dom'
 
 const RootLayout = () => {
   return (
-    <main>
+    <main className='bg-dark'>
       <Sidebar />
 
-      <section className="p-8 lg:ml-64">
+      <section className="p-8 bg-lightGray min-h-screen lg:ml-64 dark:bg-darkGray">
         <Outlet />
       </section>
     </main>

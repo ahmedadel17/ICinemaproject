@@ -25,10 +25,8 @@ module.exports = {
 
       boxShadow: {
         btnShado: '35px 35px 0 10px #febe08',
-      }
-
-
-      
+        darkShadow: '0px 0px 2px rgba(255, 255, 255, 0.25)',
+      } 
     },
 
     container: {

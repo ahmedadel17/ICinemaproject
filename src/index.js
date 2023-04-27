@@ -5,7 +5,15 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 
-import { RootLayout, Admin, Boking, Profile, Service, Timeline, AuthLayout } from "./pages";
+import {
+  RootLayout,
+  Admin,
+  Boking,
+  Profile,
+  Service,
+  Timeline,
+  AuthLayout,
+} from "./pages";
 import { LoginForm, SignupForm } from "./components";
 
 const router = createBrowserRouter([
@@ -25,11 +33,11 @@ const router = createBrowserRouter([
     path: "auth",
     element: <AuthLayout />,
     children: [
-      { index: true, element: <LoginForm />},
+      { index: true, element: <LoginForm /> },
       { path: "login", element: <LoginForm /> },
       { path: "register", element: <SignupForm /> },
     ],
-  }
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
