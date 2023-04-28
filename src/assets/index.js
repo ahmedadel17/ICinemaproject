@@ -13,6 +13,10 @@ export {default as logOutIcon} from './icons/logout.svg';
 export {default as timelineIcon} from './icons/timeline.svg';
 export {default as chevronIcon} from './icons/chevron.png';
 
+export {default as chareIcon} from './icons/chare.svg';
+export {default as timeIcon} from './icons/time.svg';
+export {default as calendarIcon} from './icons/calendar.svg';
+
 
 
 // export images

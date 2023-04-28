@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 const RootLayout = () => {
   return (
-    <main>
+    <main className='bg-dark'>
       <Sidebar />
 
       <section className="p-8 bg-lightGray lg:ml-64 dark:bg-darkGray">
