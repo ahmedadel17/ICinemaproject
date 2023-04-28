@@ -1,5 +1,3 @@
-import Button from "../components/Button";
-
 function Createuser(props) {
   return (
     <div className="flex border mt-5">
@@ -15,7 +13,7 @@ function Createuser(props) {
         <div className="flex mt-5">
           <div className="mx-5">
             <label
-              for="email"
+              htmlFor="email"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Create user
@@ -32,7 +30,7 @@ function Createuser(props) {
 
           <div className="w-96 mx-5">
             <label
-              for="password"
+              htmlFor="password"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Create password

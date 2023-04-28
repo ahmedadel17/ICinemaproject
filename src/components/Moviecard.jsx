@@ -1,33 +1,47 @@
-import React from 'react'
-import Categoryitem from './Categoryitem'
+import { dataIcon } from "../assets";
 
-function Moviecard() {
+function Moviecard({ img, title, starring, features, releaseDate }) {
   return (
-    <div className='w-720px h-240px border mt-5 ml-5 mr-5 flex rounded-lg p-5' > 
-      <img src="https://assets.voxcinemas.com/posters/P_HO00009956.jpg" alt="" className='w-40 h-64 rounded-lg mt-5 mb-5 ml-5 border-yellow-500 border-4' />
-      <div className=' w-full  ml-5'>
-        <h1 className='mt-5 font-bold'> Nabil elgameel Dr tagmeel</h1>
+    <div className="flex-1 flex items-center gap-4 p-4 rounded-2xl bg-white shadow-md dark:shadow-darkShadow dark:bg-dark">
+      <img
+        src={img}
+        alt={title + " poster"}
+        className="w-32 object-cover rounded-lg border-yellow-500 border-2"
+      />
 
-        <h1 className='mt-10 font-bold'>Starring: mohamed tharwat</h1>
-        <div className='flex   mt-5 '>
-           <div>
+      <div>
+        <h1 className="font-light text-base text-dark mb-1 dark:text-white">
+          {title}
+        </h1>
 
-             <Categoryitem category="Comedy"/>
-             <Categoryitem time="105min"/>
-             
-           </div>
-            
-            <div>
-             <Categoryitem country="Egyptian"/>
-             <Categoryitem country="General"/>
+        <h2 className="font-light text-base text-dark mb-4 dark:text-white">
+          Starring: {starring}
+        </h2>
 
-            </div>
-        </div>
-        <h1 className='text-lg font-bold mt-5'>Release date:/28/12/2022</h1>
+        {features && (
+          <ul className="flex justify-between items-center flex-wrap gap-y-2 mb-4">
+            {features.map((feature, index) => (
+              <li key={index} className="w-1/2 flex items-center gap-2">
+                <img
+                  src={dataIcon}
+                  alt="data icon"
+                  className="w-6 h-6 object-contain dark:invert"
+                />
+
+                <span className="text-base font-light text-dark dark:text-white">
+                  {feature}
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <h3 className="text-base font-light text-dark dark:text-white">
+          Release date:{releaseDate}
+        </h3>
       </div>
-
     </div>
-  )
+  );
 }
 
-export default Moviecard
+export default Moviecard;
