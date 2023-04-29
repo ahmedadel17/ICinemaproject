@@ -1,20 +1,20 @@
 function Createuser(props) {
   return (
-    <div className="flex border mt-5">
+    <div className="flex  mt-5">
       <img
         src="https://img.freepik.com/free-vector/social-biography-concept-illustration_114360-7181.jpg?size=626&ext=jpg&ga=GA1.2.80988938.1676138881&semt=ais"
         alt="desciption image"
         className="w-80"
       />
       <div className=" w-full">
-        <h1 className="text-lg font-bold">{props.name}</h1>
-        <h2 className="mt-2">{props.description}</h2>
+        <h1 className="text-lg font-bold dark:text-white ml-4">{props.name}</h1>
+        <h2 className="mt-2 dark:text-white ml-4">{props.description}</h2>
 
         <div className="flex mt-5">
           <div className="mx-5">
             <label
               htmlFor="email"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white "
             >
               Create user
             </label>
@@ -31,7 +31,7 @@ function Createuser(props) {
           <div className="w-96 mx-5">
             <label
               htmlFor="password"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white "
             >
               Create password
             </label>
@@ -43,7 +43,7 @@ function Createuser(props) {
             />
           </div>
 
-          <button className="bg-primary text-lg rounded-lg">
+          <button className="bg-black text-primary border border-primary hover:bg-slate-800 text-lg rounded-xl w-48 h-10 mt-7">
             Save
           </button>
         </div>

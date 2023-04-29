@@ -11,7 +11,7 @@ function Profilemovies() {
     <div className="flex mt-5">
       <div className="w-1/2  h-full  ">
         <div className="h-1/2">
-          <h1 className="text-3xl ml-5 mb-5 mt-5 ">Showing now</h1>
+          <h1 className="text-3xl ml-5 mb-5 mt-5 dark:text-white font-thin">Showing now</h1>
           <Searchinput />
           <Moviecard
             releaseDate={"28/12/2022"}
@@ -23,7 +23,7 @@ function Profilemovies() {
         </div>
 
         <div className="h-1/2">
-          <h1 className="text-3xl ml-5 mb-5 mt-5 ">Coming soon</h1>
+          <h1 className="text-3xl ml-5 mb-5 mt-5 dark:text-white  font-thin">Coming soon</h1>
 
           <Searchinput />
 
@@ -38,7 +38,7 @@ function Profilemovies() {
       </div>
 
       <div className="w-1/2  h-full  p-5 ">
-        <h1 className="ml-5 my-5  text-3xl">Advertise</h1>
+        <h1 className="ml-5 my-5  text-3xl dark:text-white font-thin">Advertise</h1>
         {/* advertise bar */}
         <div className=" w-[720px] h-[60px] border-black flex justify-around">
           <div className=" w-[567px] h-[56px]   border rounded-xl">
