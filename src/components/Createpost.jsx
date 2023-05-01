@@ -3,7 +3,7 @@ import {AiOutlinePlus} from "react-icons/ai"
 function Createpost() {
   return (
     <div>
-      <div className='w-full border    rounded-xl h-14 dark:bg-black flex felx-row align-center relative'>
+      <div className='w-full shadow-lg   rounded-xl h-14 dark:bg-black flex felx-row align-center relative'>
         <h1 className='dark:text-white my-4 mx-4'>Create post</h1>
         <button className='absolute right-3 top-3' data-modal-target="staticModal" data-modal-toggle="staticModal"  type="button"><AiOutlinePlus size={'2rem'} className='dark:text-white text-black'/></button>
 

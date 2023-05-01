@@ -1,5 +1,5 @@
 import React from 'react'
-import Controltop from './Controltop';
+// import Controltop from './Controltop';
 import Post from './Post';
 import Createpost from './Createpost';
 import Ratings from './Ratings';
@@ -51,7 +51,7 @@ function Timelinecomponent() {
           </div>
          <div >
          <Ratings/>
-        <div className='w-180 h-auto border border-gray mx-5 my-5 dark:bg-black rounded-lg'>
+        <div className='w-180 h-auto shadow-2xl mx-5 my-5 dark:bg-black rounded-lg'>
         <Comments
         pic='https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' 
         name='Ahmed Elbastawesy' 

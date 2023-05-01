@@ -12,7 +12,7 @@ function Controltop(props) {
     </div>
   )
   return (
-    <div className='flex border rounded-lg p-2 relative dark:bg-dark mb-5'>
+    <div className='flex shadow-lg rounded-lg p-2 relative dark:bg-dark mb-5'>
       <img src={logo} alt="" className='w-10 h-10 rounded-full' />
       <div className=' ml-5 dark:text-white'>
         <h1>Galaxycinema</h1>

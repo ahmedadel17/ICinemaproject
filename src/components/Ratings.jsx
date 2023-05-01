@@ -5,7 +5,7 @@ import Numberedprogress from './Numberedprogress';
 function Ratings() {
   return (
 <>
-<div className='w-180 h-52 border border-gray rounded-xl flex flex-row dark:bg-black  mx-5'>
+<div className='w-180 h-52 shadow-lg rounded-xl flex flex-row dark:bg-black  mx-5'>
           
           <div className='w-1/3   flex flex-col justify-around items-center '>
           

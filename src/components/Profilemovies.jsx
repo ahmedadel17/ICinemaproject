@@ -40,8 +40,8 @@ function Profilemovies() {
       <div className="w-1/2  h-full  p-5 ">
         <h1 className="ml-5 my-5  text-3xl dark:text-white font-thin">Advertise</h1>
         {/* advertise bar */}
-        <div className=" w-[720px] h-[60px] border-black flex justify-around">
-          <div className=" w-[567px] h-[56px]   border rounded-xl">
+        <div className=" w-[720px] h-[60px]  flex justify-around">
+          <div className=" w-[567px] h-[56px]   shadow-lg dark:border rounded-xl">
             <button className="grow  rounded-xl active:bg-primary    w-1/3 h-full">
               Ad1
             </button>

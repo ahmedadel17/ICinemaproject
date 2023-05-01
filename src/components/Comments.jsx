@@ -3,7 +3,7 @@ import Avatar from './Avatar'
 import { stars } from '../assets'
 function Comments(props) {
   return (
-    <div className='w-[95%]   mx-auto border-b border-gray  h-28 '>
+    <div className='w-[95%]   mx-auto border-b border-zinc-300  h-28 '>
        <div className='flex flex-row  relative   h-20'>
        <Avatar src={props.pic}/>
         <div>

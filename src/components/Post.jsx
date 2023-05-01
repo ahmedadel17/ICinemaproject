@@ -8,7 +8,7 @@ import Postinteractions from './Postinteractions'
 function Post(props) {
   return (
     <div >
-         <div className='w-full h-[650px] border dark:bg-black my-5 rounded-xl  ' >
+         <div className='w-full h-[650px] shadow-lg dark:bg-black my-5 rounded-xl  ' >
     <PostTop name={props.profilename} src={props.profileimage} time={props.time}/>
     <PostDescription desc={props.desc}/>
     <Postimg src={props.postimg} alt={props.postalt}/>
