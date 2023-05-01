@@ -19,7 +19,7 @@ export {default as dataIcon} from './icons/data_icon.svg';
 export {default as comment} from './icons/comment.svg';
 export {default as like} from './icons/like.svg';
 export {default as share} from './icons/share.svg';
-export {default as stars} from './icons/stars.png';
+export {default as stars} from './icons/stars.svg';
 export {default as following} from './icons/following.png';
 export {default as locaiton} from './icons/location.png';
 

@@ -12,7 +12,7 @@ function Ratings() {
           <div className='w-full h-2/3  flex flex-col justify-around items-center border-r-primary border-l-transparent border-t-transparent border-b-transparent'>
             <h1 className='dark:text-white mt-2 mb-2'>Average Rating</h1>
           <h2 className='text-3xl text-primary mt-2 mb-2'>4.5</h2>
-          <img src={stars} alt="rating" className='w-44' />
+          <img src={stars} alt="rating" className='w-44 ' />
           <h1 className='dark:text-white mt-2'>200 ratings</h1>
           </div>
           
