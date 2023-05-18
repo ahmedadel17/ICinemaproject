@@ -6,6 +6,7 @@ const Boking = () => {
   return (
     <div>
       <Controltop entry='movies_about' left='Movies' right='History'/>
+      
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-4 justify-center xl:flex-row">
           <Moviecard 

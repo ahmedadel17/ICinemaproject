@@ -1,12 +1,13 @@
 function Createuser(props) {
   return (
-    <div className="flex  mt-5">
+    <div className="flex mt-5">
       <img
         src="https://img.freepik.com/free-vector/social-biography-concept-illustration_114360-7181.jpg?size=626&ext=jpg&ga=GA1.2.80988938.1676138881&semt=ais"
-        alt="desciption image"
-        className="w-80"
+        alt="desciption"
+        className="w-64 h-44 rounded-xl object-cover outline outline-2 outline-primary"
       />
-      <div className=" w-full">
+
+      <div className="w-full">
         <h1 className="text-lg font-bold dark:text-white ml-4">{props.name}</h1>
         <h2 className="mt-2 dark:text-white ml-4">{props.description}</h2>
 

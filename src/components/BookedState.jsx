@@ -6,7 +6,7 @@ const valueMax = 294;
 
 const BookedState = () => {
   return (
-    <div className="flex items-center justify-center relative w-36 mx-4 px-4 border-x-2 border-primary">
+    <div className="hidden items-center justify-center relative w-36 mx-4 px-4 border-x-2 border-primary sm:flex">
       <CircularProgressbar
         value={percentage}
         maxValue={valueMax}

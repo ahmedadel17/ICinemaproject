@@ -5,7 +5,7 @@ import Calendar from "./Calendar";
 const ShowingInfo = () => {
   return (
     <div className="flex-1 p-3 rounded-2xl shadow-darkShadow bg-white dark:bg-dark">
-      <ul className="flex justify-between items-center gap-4 mb-3">
+      <ul className="hidden justify-between items-center gap-4 mb-3 sm:flex">
         <li className="flex items-center justify-center w-52">
           <img
             src={calendarIcon}
@@ -37,7 +37,7 @@ const ShowingInfo = () => {
         </li>
       </ul>
 
-      <div className="flex justify-between items-center">
+      <div className="flex justify-center items-center flex-wrap gap-y-4 sm:justify-between">
         <Calendar />
 
         <BookedState />

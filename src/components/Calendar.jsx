@@ -10,8 +10,8 @@ export default function Calendar() {
   const [today, setToday] = useState(currentDate);
 
   return (
-    <div className="w-52">
-      <div className="flex gap-10 items-center justify-center">
+    <div>
+      <div className="flex gap-5 items-center justify-center">
         <GrFormPrevious
           className="w-5 h-5 cursor-pointer hover:scale-105 transition-all dark:invert"
           onClick={() => {

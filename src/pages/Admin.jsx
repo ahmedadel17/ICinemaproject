@@ -6,7 +6,7 @@ function Admin() {
     <div>
       <Controltop entry='user' />
 
-      <h1 className="mt-10 text-lg dark:text-white">
+      <h1 className="my-6 text-xl font-light text-dark dark:text-white">
         You have several admins to control your system perfectly:
       </h1>
 

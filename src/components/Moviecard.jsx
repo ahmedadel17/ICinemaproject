@@ -2,14 +2,14 @@ import { dataIcon } from "../assets";
 
 function Moviecard({ img, title, starring, features, releaseDate }) {
   return (
-    <div className="flex-1 flex items-center gap-4 p-4 rounded-2xl bg-white shadow-md dark:shadow-darkShadow dark:bg-dark">
+    <div className="flex-1 flex flex-col items-center gap-4 p-4 rounded-2xl bg-white shadow-md dark:shadow-darkShadow dark:bg-dark sm:flex-row">
       <img
         src={img}
         alt={title + " poster"}
-        className="w-32 object-cover rounded-lg border-yellow-500 border-2"
+        className="w-full max-h-64 object-contain rounded-lg border-yellow-500 border-2 sm:w-32 sm:max-h-full"
       />
 
-      <div>
+      <div className="w-full sm:w-auto">
         <h1 className="font-light text-base text-dark mb-1 dark:text-white">
           {title}
         </h1>

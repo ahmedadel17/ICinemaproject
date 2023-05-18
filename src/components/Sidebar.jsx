@@ -21,7 +21,7 @@ function Sidebar() {
     dispatch(setAsideBar());
     e.preventDefault();
   };
-  
+
   return (
     <aside
       className={`
@@ -83,7 +83,7 @@ function Sidebar() {
                 <img
                   src={profileImg}
                   alt="admin icon"
-                  className="w-5 h-5 object-contain mr-3"
+                  className="w-6 h-6 object-contain mr-3 rounded-full outline outline-1 outline-primary"
                 />
 
                 <span className="font-light text-lg text-dark capitalize group-active:text-dark dark:text-white group-[]:dark:text-dark">
@@ -157,7 +157,10 @@ function Sidebar() {
           </ul>
         </div>
 
-        <Link to="auth/login" className="flex items-center relative py-2.5 px-12">
+        <Link
+          to="auth/login"
+          className="flex items-center relative py-2.5 px-12"
+        >
           <img
             src={logOutIcon}
             alt="admin icon"
@@ -175,9 +178,9 @@ function Sidebar() {
         className="absolute top-8 left-full w-8 h-8 rounded-r-md flex justify-center items-center bg-primary lg:hidden"
         onClick={handleAside}
       >
-        <img 
+        <img
           src={chevronIcon}
-          alt="open icon" 
+          alt="open icon"
           className="w-4 h-4 object-contain"
         />
       </a>
