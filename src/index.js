@@ -16,6 +16,8 @@ import {
   AuthLayout,
 } from "./pages";
 import { LoginForm, SignupForm } from "./components";
+import AddMovie from "./pages/AddMovie";
+import ShowDays from "./pages/ShowDays";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +26,23 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Admin /> },
       { path: "profile", element: <Profile /> },
-      { path: "profile", element: <Profile /> },
+      {
+        path: "profile",
+        children: [
+          {
+            index: true,
+            element: <Profile />,
+          },
+          {
+            path: "add-movie",
+            element: <AddMovie />,
+          },
+          {
+            path: "show-days",
+            element: <ShowDays />,
+          },
+        ],
+      },
       { path: "boking", element: <Boking /> },
       { path: "service", element: <Service /> },
       { path: "timeline", element: <Timeline /> },

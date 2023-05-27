@@ -2,22 +2,39 @@ import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import Edit from "./Edit";
 import Plussign from "./Plussign";
+import { editIcon } from "../assets";
+import { Link } from "react-router-dom";
 function Searchinput() {
   return (
-    <div>
-      <form className="flex items-center justify-around  relative  mb-5">
-        <input
-          type="search"
-          className="border w-[567px] h-[56px] rounded-xl  "
-          placeholder="Search here"
-        />
+    <div className="mb-5">
+      <form className="">
+        <div className="flex items-stretch justify-between gap-3">
+          <div className="relative flex-1">
+            <input
+              type="search"
+              className="w-full h-full py-2 pl-4 pr-12 border-none focus:ring-0 rounded-xl shadow-md text-light font-light dark:bg-dark dark:shadow-darkShadow"
+              placeholder="Search here"
+            />
 
-        <button type="submit" className=" absolute left-[520px]">
-          <AiOutlineSearch size={"2rem"} />
-        </button>
-        
-        <Edit />
-        <Plussign />
+            <a href="#" className="absolute top-1/2 right-3 -translate-y-1/2">
+              <img
+                src={editIcon}
+                alt="edit icon"
+                className="w-5 h-5 object-contain sm:w-6 sm:h-6"
+              />
+            </a>
+          </div>
+
+          <Link to="add-movie"
+            className="p-3 rounded-xl shadow-md dark:shadow-darkShadow"
+          >
+            <img
+              src={editIcon}
+              alt="edit icon"
+              className="w-5 h-5 object-contain sm:w-6 sm:h-6"
+            />
+          </Link>
+        </div>
       </form>
     </div>
   );

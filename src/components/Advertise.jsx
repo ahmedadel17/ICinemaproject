@@ -1,18 +1,22 @@
-import React from 'react'
+import React from "react";
 
 function Advertise(props) {
   return (
-    <div className="border w-[720px] h-[776px]  rounded-lg border-yellow-500 mt-5 ">
-    <img
-      src={props.src}
-      alt="shalaby"
-      className="w-[720px] h-[720px] rounded-tl-lg rounded-tr-lg  "
-      loading="lazy"
-      
-    />
-    <h1 className="text-center mt-5">Top rated movie</h1>
+    <div className="w-full p-4 rounded-2xl shadow-md dark:shadow-darkShadow">
+      <div className="w-full aspect-square mb-4 rounded-xl border border-primary overflow-hidden">
+        <img
+          src={props.src}
+          alt="shalaby"
+          className="w-full h-full object-cover rounded-xl"
+          loading="lazy"
+        />
+      </div>
+
+      <p className="text-light font-light text-center rounded-xl py-3 px-4 shadow-md dark:shadow-darkShadow">
+        Galaxy cinema added 9D experience, try it to enjoy more
+      </p>
     </div>
-  )
+  );
 }
 
-export default Advertise
+export default Advertise;

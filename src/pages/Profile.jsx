@@ -7,11 +7,9 @@ function Profile() {
   return (
     <div className="dark:text-gray">
       {/* two options here movies_about or user  */}
-      <Controltop entry='movies_about'  left='Movies' right='About'/>
-      <Profilemovies/>
+      <Controltop entry="movies_about" left="Movies" right="About" />
+      <Profilemovies />
       {/* <Profileabout/> */}
-      
-   
     </div>
   );
 }
