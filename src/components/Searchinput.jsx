@@ -12,7 +12,7 @@ function Searchinput() {
           <div className="relative flex-1">
             <input
               type="search"
-              className="w-full h-full py-2 pl-4 pr-12 border-none focus:ring-0 rounded-xl shadow-md text-light font-light dark:bg-dark dark:shadow-darkShadow"
+              className="w-full h-full py-2 pl-4 pr-12 focus:ring-0 rounded-xl shadow-md border !border-gray text-dark font-light dark:bg-dark dark:text-light dark:shadow-darkShadow dark:border-none"
               placeholder="Search here"
             />
 
@@ -25,7 +25,8 @@ function Searchinput() {
             </a>
           </div>
 
-          <Link to="add-movie"
+          <Link
+            to="add-movie"
             className="p-3 rounded-xl shadow-md dark:shadow-darkShadow"
           >
             <img

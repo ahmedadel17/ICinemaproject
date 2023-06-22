@@ -10,7 +10,7 @@ function Profilemovies() {
     <div className="grid grid-cols-1 gap-10 xl:grid-cols-2 md:pt-5">
       <div>
         <div>
-          <h1 className="mb-5 text-xl dark:text-white font-thin md:text-3xl">
+          <h1 className="mb-5 text-xl dark:text-white font-thin md:text-2xl">
             Showing now
           </h1>
 
@@ -26,7 +26,7 @@ function Profilemovies() {
         </div>
 
         <div>
-          <h1 className="text-3xl ml-5 mb-5 mt-5 dark:text-white  font-thin">
+          <h1 className="mb-5 text-xl dark:text-white font-thin md:text-2xl">
             Coming soon
           </h1>
 
@@ -46,9 +46,9 @@ function Profilemovies() {
         <h1 className="mb-5 text-3xl dark:text-white font-thin">Advertise</h1>
 
         <div className="flex items-center gap-4 mb-4">
-          <div className="flex items-center justify-between flex-1 gap-2 rounded-xl py-1 px-2 sm:py-2 sm:px-4 shadow-md dark:shadow-darkShadow overflow-auto">
+          <div className="flex items-center flex-1 gap-2 rounded-xl py-1 px-2 sm:py-2 sm:px-4 shadow-md dark:shadow-darkShadow overflow-auto">
             <button
-              className={`px-8 text-xl py-1 font-light rounded-lg border border-primary transition-colors md:px-14 ${
+              className={`px-6 py-1 font-light rounded-lg border border-primary transition-colors md:px-12 ${
                 activeTab === "tab1" ? "bg-primary text-dark" : "text-primary"
               }`}
               onClick={() => setActiveTab("tab1")}
@@ -57,7 +57,7 @@ function Profilemovies() {
             </button>
 
             <button
-              className={`px-8 text-xl py-1 font-light rounded-lg border border-primary transition-colors md:px-14 ${
+              className={`px-6 py-1 font-light rounded-lg border border-primary transition-colors md:px-12 ${
                 activeTab === "tab2" ? "bg-primary text-dark" : "text-primary"
               }`}
               onClick={() => setActiveTab("tab2")}
@@ -66,7 +66,7 @@ function Profilemovies() {
             </button>
 
             <button
-              className={`px-8 text-xl py-1 font-light rounded-lg border border-primary transition-colors md:px-14 ${
+              className={`px-6 py-1 font-light rounded-lg border border-primary transition-colors md:px-12 ${
                 activeTab === "tab3" ? "bg-primary text-dark" : "text-primary"
               }`}
               onClick={() => setActiveTab("tab3")}

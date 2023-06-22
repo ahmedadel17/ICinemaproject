@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  asideBar: true,
+  asideBar: false,
 };
 
 export const appSlice = createSlice({

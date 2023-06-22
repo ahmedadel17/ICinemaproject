@@ -24,6 +24,13 @@ export { default as editIcon } from "./icons/edit.svg";
 
 export { default as downArrowIcon } from "./icons/down-arrow.png";
 export { default as uploadIcon } from "./icons/cloud-upload.svg";
+export { default as chairIcon } from "./icons/chairs.svg";
+
+export { default as nameIcon } from "./icons/name_icon.svg";
+export { default as mailIcon } from "./icons/mail_icon.svg";
+export { default as phoneiconIcon } from "./icons/phone_icon.svg";
+export { default as locationInputIcon } from "./icons/location_icon.svg";
+
 
 
 // export images

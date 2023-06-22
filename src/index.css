@@ -4,36 +4,36 @@
 
 @layer base {
   @font-face {
-    font-family: 'Stolzl';
-    src: url('./assets/fonts/stolzl/Stolzl-Bold.woff2') format('woff2'),
-      url('./assets/fonts/stolzl/Stolzl-Bold.woff') format('woff');
+    font-family: "Stolzl";
+    src: url("./assets/fonts/stolzl/Stolzl-Bold.woff2") format("woff2"),
+      url("./assets/fonts/stolzl/Stolzl-Bold.woff") format("woff");
     font-weight: 700;
   }
 
   @font-face {
-    font-family: 'Stolzl';
-    src: url('./assets/fonts/stolzl/Stolzl-Medium.woff2') format('woff2'),
-      url('./assets/fonts/stolzl/Stolzl-Medium.woff') format('woff');
+    font-family: "Stolzl";
+    src: url("./assets/fonts/stolzl/Stolzl-Medium.woff2") format("woff2"),
+      url("./assets/fonts/stolzl/Stolzl-Medium.woff") format("woff");
     font-weight: 400;
   }
 
   @font-face {
-    font-family: 'Stolzl';
-    src: url('./assets/fonts/stolzl/Stolzl-Regular.woff2') format('woff2'),
-      url('./assets/fonts/stolzl/Stolzl-Regular.woff') format('woff');
+    font-family: "Stolzl";
+    src: url("./assets/fonts/stolzl/Stolzl-Regular.woff2") format("woff2"),
+      url("./assets/fonts/stolzl/Stolzl-Regular.woff") format("woff");
     font-weight: 300;
   }
 
   body {
-    font-family: 'Stolzl', sans-serif;
+    font-family: "Stolzl", sans-serif;
   }
 }
 
 @layer components {
   .activeBtn::after,
-  .activeBtn::before{
-    content: '';
-    position: absolute;    
+  .activeBtn::before {
+    content: "";
+    position: absolute;
     right: 0;
     width: 50px;
     height: 50px;
@@ -49,5 +49,46 @@
   .activeBtn::before {
     top: 100%;
     box-shadow: 35px -35px 0 10px #febe08;
+  }
+
+  .primary-filter {
+    filter: invert(59%) sepia(96%) saturate(408%) hue-rotate(3deg)
+      brightness(105%) contrast(106%);
+  }
+
+  .gray-filter {
+    filter: invert(50%) sepia(21%) saturate(0%) hue-rotate(209deg)
+      brightness(83%) contrast(87%);
+  }
+
+  .lightGray-filter {
+    filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(329deg)
+      brightness(92%) contrast(83%);
+  }
+
+  .empty-chair {
+    position: relative;
+  }
+
+  .empty-chair::after,
+  .empty-chair::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: calc(100% - 2px);
+    z-index: 1;
+  }
+
+  .empty-chair::after {
+    height: 2px;
+    background-color: #f05252;
+  }
+
+  .empty-chair::before {
+    height: calc(100% - 2px);
+    border-radius: 50%;
+    border: 2px solid #f05252;
   }
 }

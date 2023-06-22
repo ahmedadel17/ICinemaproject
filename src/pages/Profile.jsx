@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Controltop from "../components/Controltop";
-
-// import Profileabout from "../components/Profileabout";
 import Profilemovies from "../components/Profilemovies";
+import ProfileAbout from "../components/ProfileAbout";
 function Profile() {
+  const [navTap, setNavTap] = useState("Movies");
+
+  const handleTap = (tap) => {
+    setNavTap(tap);
+  };
+
   return (
     <div className="dark:text-gray">
-      {/* two options here movies_about or user  */}
-      <Controltop entry="movies_about" left="Movies" right="About" />
-      <Profilemovies />
-      {/* <Profileabout/> */}
+      <Controltop
+        handleTap={handleTap}
+        entry="movies_about"
+        left="Movies"
+        right="About"
+      />
+
+      {navTap === "Movies" ? <Profilemovies /> : <ProfileAbout />}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { dataIcon } from "../assets";
 
 function Moviecard({ img, title, starring, features, releaseDate }) {
   return (
-    <div className="flex-1 flex flex-col items-center gap-4 p-4 rounded-2xl bg-white shadow-md dark:shadow-darkShadow dark:bg-dark sm:flex-row">
+    <div className="flex-1 flex flex-col items-center gap-4 p-4 rounded-2xl bg-white shadow-md mb-5 dark:shadow-darkShadow dark:bg-dark sm:flex-row">
       <img
         src={img}
         alt={title + " poster"}

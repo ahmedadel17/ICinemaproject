@@ -4,6 +4,10 @@ import { profileImg } from "../assets";
 function Controltop(props) {
   const [navTap, setNavTap] = useState(props.left);
 
+  const handleTap = (tap) => {
+    props.handleTap(tap);
+  };
+
   const user = (
     <button className="px-5 py-1.5 bg-primary text-lg font-light rounded-lg border border-primary transition-colors sm:px-10 sm:py-2 md:px-20 hover:bg-transparent hover:text-primary">
       user
@@ -16,7 +20,10 @@ function Controltop(props) {
         className={`px-5 py-1.5 font-light hover:bg-primary hover:text-dark sm:px-10 sm:py-2 md:px-20 ${
           navTap === props.left ? "bg-primary text-dark" : "text-primary"
         }`}
-        onClick={() => setNavTap(props.left)}
+        onClick={() => {
+          setNavTap(props.left);
+          handleTap(props.left);
+        }}
       >
         {props.left}
       </button>
@@ -25,7 +32,10 @@ function Controltop(props) {
         className={`px-5 py-1.5 font-light hover:bg-primary hover:text-dark sm:px-10 sm:py-2 md:px-20 ${
           navTap === props.right ? "bg-primary text-dark" : "text-primary"
         }`}
-        onClick={() => setNavTap(props.right)}
+        onClick={() => {
+          setNavTap(props.right);
+          handleTap(props.right);
+        }}
       >
         {props.right}
       </button>
@@ -45,7 +55,7 @@ function Controltop(props) {
           <h1 className="font-light">Galaxycinema</h1>
           <h2 className="font-light">Galaxycinema@gmail.com</h2>
         </div>
-        </div>
+      </div>
 
       {props.entry === "movies_about" ? movies_about : user}
     </div>
