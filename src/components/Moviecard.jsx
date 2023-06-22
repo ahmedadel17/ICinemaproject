@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
 import { dataIcon } from "../assets";
 
 function Moviecard({ img, title, starring, features, releaseDate }) {
   return (
-    <div className="flex-1 flex flex-col items-center gap-4 p-4 rounded-2xl bg-white shadow-md mb-5 dark:shadow-darkShadow dark:bg-dark sm:flex-row">
+    <Link
+      to={"/boking/1"}
+      className="flex-1 flex flex-col items-center gap-4 p-4 rounded-2xl bg-white shadow-md dark:shadow-darkShadow dark:bg-dark sm:flex-row"
+    >
       <img
         src={img}
         alt={title + " poster"}
@@ -40,7 +44,7 @@ function Moviecard({ img, title, starring, features, releaseDate }) {
           Release date:{releaseDate}
         </h3>
       </div>
-    </div>
+    </Link>
   );
 }
 

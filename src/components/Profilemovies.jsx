@@ -7,7 +7,7 @@ import { editIcon } from "../assets";
 function Profilemovies() {
   const [activeTab, setActiveTab] = useState("tab1");
   return (
-    <div className="grid grid-cols-1 gap-10 xl:grid-cols-2 md:pt-5">
+    <div className="grid grid-cols-1 gap-10 xl:grid-cols-2">
       <div>
         <div>
           <h1 className="mb-5 text-xl dark:text-white font-thin md:text-2xl">
@@ -26,7 +26,7 @@ function Profilemovies() {
         </div>
 
         <div>
-          <h1 className="mb-5 text-xl dark:text-white font-thin md:text-2xl">
+          <h1 className="mb-5 text-xl dark:text-white font-thin mt-5 md:text-2xl">
             Coming soon
           </h1>
 

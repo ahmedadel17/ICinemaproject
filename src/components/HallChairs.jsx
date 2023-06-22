@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { chairIcon } from "../assets";
 
-const HallChairs = ({ hallInChairs }) => {
+const HallChairs = ({ hallInChairs, clicked }) => {
+  const [selectedChair, setSelectedChairs] = useState([])
+
+  const handleSelect = (e) => {
+    e.preventDefault()
+  }
   return (
     <div className="flex-1 flex justify-center relative rounded-xl p-3 bg-white shadow-md dark:shadow-darkShadow dark:bg-dark md:p-5">
       <div className="overflow-auto">
@@ -14,6 +19,8 @@ const HallChairs = ({ hallInChairs }) => {
                 className={`w-6 h-6 flex-shrink-0 flex ${
                   chair.status === "empty" ? "invisible" : "visible"
                 }`}
+
+                onClick={handleSelect}
               >
                 <img
                   src={chairIcon}

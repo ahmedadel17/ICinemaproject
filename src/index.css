@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+input::placeholder{
+  color: rgb(112, 112, 112)
+}
+
 @layer base {
   @font-face {
     font-family: "Stolzl";

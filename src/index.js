@@ -18,6 +18,7 @@ import {
 import { LoginForm, SignupForm } from "./components";
 import AddMovie from "./pages/AddMovie";
 import ShowDays from "./pages/ShowDays";
+import BookMovie from "./pages/BookMovie";
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,16 @@ const router = createBrowserRouter([
           },
         ],
       },
-      { path: "boking", element: <Boking /> },
+      {
+        path: "boking",
+        children: [
+          { index: true, element: <Boking /> },
+          {
+            path: "/boking/:id",
+            element: <BookMovie />
+          },
+        ],
+      },
       { path: "service", element: <Service /> },
       { path: "timeline", element: <Timeline /> },
     ],

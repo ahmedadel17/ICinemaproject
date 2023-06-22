@@ -46,18 +46,14 @@ const AddHall = () => {
 
       return newState;
     });
-
-    console.log(chairsInHole);
   };
-
-  
 
   return (
     <div className="flex gap-5 flex-wrap">
       <div className="flex-1 flex justify-center relative rounded-xl p-3 bg-white shadow-md dark:shadow-darkShadow dark:bg-dark md:p-5">
         {chairsInHole.length < 1 ? (
           <div className="flex justify-center items-center">
-            <p className="text-lg text-center text-gray">
+            <p className="text-lg text-center text-gray font-light">
               you did not add any hall yet , add one at least so you can control
               booking
             </p>
@@ -127,7 +123,7 @@ const AddHall = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 pb-5 mb-5 border-b border-gray">
           <button
             className={`flex-1 flex flex-col justify-center items-center gap-2 p-4 border-2 rounded-lg ${
               selectedSeats === "empty" ? "border-primary" : "border-gray"
@@ -186,6 +182,12 @@ const AddHall = () => {
               className="w-7 h-7 object-contain primary-filter"
             />
             <span className="text-sm text-primary">VIP</span>
+          </button>
+        </div>
+
+        <div className="flex">
+          <button className="block text-center w-full font-thin capitalize py-2 px-10 bg-primary border border-primary transition duration-300 text-dark rounded-md hover:text-primary hover:bg-transparent">
+            Add Hall
           </button>
         </div>
       </div>

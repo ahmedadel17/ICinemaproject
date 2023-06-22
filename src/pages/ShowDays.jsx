@@ -1,6 +1,7 @@
 import React from "react";
 import { hall } from "../data/selectData";
 import SelectOptions from "../components/SelectBox";
+import BokingTable from "../components/BokingTable";
 
 const ShowDays = () => {
   return (
@@ -73,21 +74,23 @@ const ShowDays = () => {
         <div className="w-full md:flex-1 flex flex-col justify-between">
           <div className="mb-3 h-fit">
             <label
-              htmlFor="genre"
+              htmlFor="hall"
               className="inline-block mb-2 capitalize font-light text-dark text-lg dark:text-white"
             >
-              Genre
+              hall
             </label>
             <SelectOptions data={hall} />
           </div>
 
           <div>
             <button className="block text-center w-full font-thin capitalize py-2 px-10 bg-primary border border-primary transition duration-300 text-dark rounded-md hover:text-primary hover:bg-transparent">
-              next
+              save
             </button>
           </div>
         </div>
       </div>
+
+      <BokingTable />
     </section>
   );
 };
