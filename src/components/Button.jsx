@@ -1,6 +1,6 @@
 import React from "react";
 
-function Button({ children, fild, handleClick }) {
+function Button({ children, fild, handleClick, isLoading }) {
   return (
     <button
       onClick={handleClick}
@@ -9,6 +9,7 @@ function Button({ children, fild, handleClick }) {
         rounded-lg transition duration-300
         lg:w-52 lg:py-2.5 lg:text-lg
         bg-primary border border-primary text-dark hover:text-primary hover:bg-transparent
+        ${isLoading && "pointer-events-none opacity-70"}
         `}
     >
       {children}

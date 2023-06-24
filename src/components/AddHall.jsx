@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { chairIcon } from "../assets";
+import { useDispatch } from "react-redux";
+import { setNewHall } from "../app/reducers/appSlice";
 
-const AddHall = () => {
+const AddHall = ({newHallAdded}) => {
+  const dispatch = useDispatch();
+
   const [chairsRow, setChairsRow] = useState(0);
   const [chairsColumn, setChairsColumn] = useState(0);
 
   const [chairsInHole, setChairsInHole] = useState([]);
   const [selectedSeats, setSelectedSeats] = useState("empty");
+  const [hallName, setHallName] = useState("");
 
   const chairsContent = [];
 
@@ -47,6 +52,17 @@ const AddHall = () => {
       return newState;
     });
   };
+
+  const handleAddHall = () => {
+    dispatch(
+      setNewHall({
+        hallName,
+        seats: chairsInHole,
+      })
+    )
+
+    newHallAdded(hallName)
+  }
 
   return (
     <div className="flex gap-5 flex-wrap">
@@ -100,6 +116,17 @@ const AddHall = () => {
 
       <div className="flex-1 bg-white shadow-md dark:shadow-darkShadow rounded-xl p-3 dark:bg-dark md:p-5">
         <div className="flex gap-4 flex-wrap pb-5 mb-5 border-b border-gray">
+          <div className="flex flex-col gap-1 flex-1">
+            <label htmlFor="hallName">Hall Name :</label>
+            <input
+              type="tel"
+              className="py-2 px-3 focus:ring-0 rounded-lg shadow-md border !border-gray text-dark font-light dark:bg-dark dark:text-light dark:shadow-darkShadow dark:border-none"
+              placeholder="Hall Name"
+              id="hallName"
+              onChange={(e) => setHallName(e.target.value)}
+            />
+          </div>
+
           <div className="flex flex-col gap-1 flex-1">
             <label htmlFor="columns">Columns :</label>
             <input
@@ -186,7 +213,10 @@ const AddHall = () => {
         </div>
 
         <div className="flex">
-          <button className="block text-center w-full font-thin capitalize py-2 px-10 bg-primary border border-primary transition duration-300 text-dark rounded-md hover:text-primary hover:bg-transparent">
+          <button
+            onClick={handleAddHall}
+            className="block text-center w-full font-thin capitalize py-2 px-10 bg-primary border border-primary transition duration-300 text-dark rounded-md hover:text-primary hover:bg-transparent"
+          >
             Add Hall
           </button>
         </div>

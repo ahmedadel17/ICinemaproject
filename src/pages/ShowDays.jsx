@@ -1,11 +1,16 @@
-import React from "react";
 import { hall } from "../data/selectData";
 import SelectOptions from "../components/SelectBox";
 import BokingTable from "../components/BokingTable";
+import AddMovieSuccess from "../components/AddMovieSucces";
+import { useState } from "react";
+import Controltop from "../components/Controltop";
 
 const ShowDays = () => {
+  const [isAdded, setIsAdded] = useState(false);
+
   return (
     <section>
+      <Controltop entry="user" />
       <div className="flex flex-wrap justify-between gap-3 mb-5">
         <div className="w-full sm:flex-1">
           <div className="mb-3">
@@ -83,7 +88,10 @@ const ShowDays = () => {
           </div>
 
           <div>
-            <button className="block text-center w-full font-thin capitalize py-2 px-10 bg-primary border border-primary transition duration-300 text-dark rounded-md hover:text-primary hover:bg-transparent">
+            <button
+              onClick={() => setIsAdded(true)}
+              className="block text-center w-full font-thin capitalize h-10 px-10 bg-primary border border-primary transition duration-300 text-dark rounded-xl hover:text-primary hover:bg-transparent"
+            >
               save
             </button>
           </div>
@@ -91,6 +99,8 @@ const ShowDays = () => {
       </div>
 
       <BokingTable />
+
+      {isAdded && <AddMovieSuccess />}
     </section>
   );
 };

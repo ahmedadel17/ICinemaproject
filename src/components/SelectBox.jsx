@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { downArrowIcon } from "../assets";
 
-const SelectOptions = ({data}) => {
+const SelectOptions = ({ data, getSelect }) => {
   const [selectItem, setSelectItem] = useState("Select");
   const [openSelect, setOpenSelect] = useState(false);
 
   const handlegenres = (e, genre) => {
     setSelectItem(genre);
+    getSelect && getSelect(genre);
     setOpenSelect(false);
     e.preventDefault();
   };

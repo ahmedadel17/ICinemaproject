@@ -4,8 +4,20 @@ import Searchinput from "./Searchinput";
 import Advertise from "./Advertise";
 import { editIcon } from "../assets";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
+
 function Profilemovies() {
   const [activeTab, setActiveTab] = useState("tab1");
+
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  };
   return (
     <div className="grid grid-cols-1 gap-10 xl:grid-cols-2">
       <div>
@@ -16,13 +28,175 @@ function Profilemovies() {
 
           <Searchinput />
 
-          <Moviecard
-            releaseDate={"28/12/2022"}
-            starring={"mohamed tharwat"}
-            title={"Nabil elgameel Dr tagmeel"}
-            img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
-            features={["Comedy", "105min", "Egyptian", "Arabic"]}
-          />
+          <Swiper
+            pagination={pagination}
+            spaceBetween={20}
+            modules={[Pagination]}
+            className="movie-swiper !pb-12"
+          >
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
 
         <div>
@@ -32,13 +206,175 @@ function Profilemovies() {
 
           <Searchinput />
 
-          <Moviecard
-            releaseDate={"28/12/2022"}
-            starring={"mohamed tharwat"}
-            title={"Nabil elgameel Dr tagmeel"}
-            img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
-            features={["Comedy", "105min", "Egyptian", "Arabic"]}
-          />
+          <Swiper
+            pagination={pagination}
+            spaceBetween={20}
+            modules={[Pagination]}
+            className="movie-swiper !pb-12"
+          >
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Moviecard
+                releaseDate={"28/12/2022"}
+                starring={"mohamed tharwat"}
+                title={"Nabil elgameel Dr tagmeel"}
+                img={"https://assets.voxcinemas.com/posters/P_HO00009956.jpg"}
+                features={["Comedy", "105min", "Egyptian", "Arabic"]}
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
 

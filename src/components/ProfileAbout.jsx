@@ -9,12 +9,14 @@ import {
 import ProfileHalls from "./ProfileHalls";
 
 const ProfileAbout = () => {
+      const userData = JSON.parse(localStorage.getItem("user"));
+
   return (
     <div>
       <div className="flex items-center justify-center flex-wrap gap-5 mb-8">
         <div className="relative w-36 h-36 rounded-full overflow-hidden md:w-44 md:h-44">
           <img
-            src={profileImg}
+            src={userData.cover}
             alt="porf"
             className="w-full h-full object-cover"
           />
@@ -31,6 +33,7 @@ const ProfileAbout = () => {
             <input
               type="text"
               id="cinemaName"
+              defaultValue={userData.name}
               className="w-full h-full py-3 pl-4 border-none focus:ring-0 rounded-xl shadow-md text-dark font-light dark:bg-dark dark:shadow-darkShadow dark:text-white"
               placeholder="Cinema name"
             />
@@ -55,6 +58,7 @@ const ProfileAbout = () => {
             <input
               type="email"
               id="email"
+              defaultValue={userData.email}
               className="w-full h-full py-3 pl-4 border-none focus:ring-0 rounded-xl shadow-md text-dark font-light dark:bg-dark dark:shadow-darkShadow dark:text-white"
               placeholder="E-mail"
             />
@@ -80,6 +84,7 @@ const ProfileAbout = () => {
             <input
               type="text"
               id="Location"
+              defaultValue={userData.address}
               className="w-full h-full py-3 pl-4 border-none focus:ring-0 rounded-xl shadow-md text-dark font-light dark:bg-dark dark:shadow-darkShadow dark:text-white"
               placeholder="Location"
             />
@@ -104,6 +109,7 @@ const ProfileAbout = () => {
             <input
               type="text"
               id="PhoneNumber"
+              defaultValue={userData.phone}
               className="w-full h-full py-3 pl-4 border-none focus:ring-0 rounded-xl shadow-md text-dark font-light dark:bg-dark dark:shadow-darkShadow dark:text-white"
               placeholder="Phone number"
             />

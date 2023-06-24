@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import Edit from "./Edit";
 import Plussign from "./Plussign";
-import { editIcon } from "../assets";
+import { editIcon, searchIcon } from "../assets";
 import { Link } from "react-router-dom";
 function Searchinput() {
   return (
@@ -18,7 +18,7 @@ function Searchinput() {
 
             <a href="#" className="absolute top-1/2 right-3 -translate-y-1/2">
               <img
-                src={editIcon}
+                src={searchIcon}
                 alt="edit icon"
                 className="w-5 h-5 object-contain sm:w-6 sm:h-6"
               />
@@ -27,7 +27,7 @@ function Searchinput() {
 
           <Link
             to="add-movie"
-            className="p-3 rounded-xl shadow-md dark:shadow-darkShadow"
+            className="p-3 rounded-xl shadow-md dark:bg-dark dark:shadow-darkShadow"
           >
             <img
               src={editIcon}

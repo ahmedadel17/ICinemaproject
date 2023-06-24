@@ -1,14 +1,74 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SelectOptions from "../components/SelectBox";
 import { genres, language } from "../data/selectData";
 import { uploadIcon } from "../assets";
 import Controltop from "../components/Controltop";
 import { Link } from "react-router-dom";
+import { useAddMovieMutation } from "../app/server/addMovieApi";
 
 const AddMovie = () => {
+  const [name, setName] = useState("");
+  const [starring, setStarring] = useState("");
+  const [genre, setGenre] = useState("");
+  const [languageValue, setLanguageValue] = useState("");
+  const [duration, setDuration] = useState("");
+  const [audience, setAudience] = useState("");
+  const [releaseDate, setReleaseDate] = useState(Date.now());
+  const [poster, setPoster] = useState("");
+  const [trailer, setTrailer] = useState("");
+  const [brief, setBrief] = useState("");
+
+  const getLanguage = (value) => {
+    setLanguageValue(value);
+  };
+
+  const getGenre = (value) => {
+    setGenre(value);
+  };
+
+  const getAudience = (value) => {
+    setAudience(value);
+  };
+
+  const [postMovie, { isSuccess, isLoading, isError, data, error }] =
+    useAddMovieMutation();
+
+  const userData = JSON.parse(localStorage.getItem("user"));
+
+  const handleAddMovie = async () => {
+    const movieData = {
+      name,
+      starring,
+      genre,
+      language: languageValue,
+      duration,
+      release_date: releaseDate,
+      audience,
+      image: poster,
+      trailer,
+      brief,
+      category_id: 2,
+      cinema_id: userData.id,
+    };
+
+    console.log(movieData);
+
+    await postMovie(movieData);
+  };
+
+  useEffect(() => {
+    if (isLoading) {
+      console.log("loading");
+    } else if (isSuccess) {
+      console.log(data);
+    } else if (isError) {
+      console.log(error);
+    }
+  }, [isLoading, isSuccess, isError, data, error]);
+
   return (
     <section>
-      <Controltop entry="movies_about" left="Movies" right="About" />
+      <Controltop entry="user" />
 
       <h1 className="mb-5 text-lg dark:text-white font-thin md:text-3xl">
         Add movie
@@ -26,6 +86,7 @@ const AddMovie = () => {
             <input
               type="text"
               id="movieName"
+              onChange={(e) => setName(e.target.value)}
               className="w-full h-full py-2 pl-4 border-none focus:ring-0 rounded-xl shadow-md text-dark font-light dark:bg-dark dark:shadow-darkShadow dark:text-white"
               placeholder="Movie name"
             />
@@ -41,6 +102,7 @@ const AddMovie = () => {
             <input
               type="date"
               id="starringDate"
+              onChange={(e) => setStarring(e.target.value)}
               className="w-full h-full py-2 pl-4 border-none focus:ring-0 rounded-xl shadow-md text-dark font-light dark:bg-dark dark:shadow-darkShadow dark:text-white"
               placeholder="Movie name"
             />
@@ -54,7 +116,7 @@ const AddMovie = () => {
               >
                 Genre
               </label>
-              <SelectOptions data={genres} />
+              <SelectOptions getSelect={getGenre} data={genres} />
             </div>
 
             <div className="flex-1">
@@ -64,7 +126,7 @@ const AddMovie = () => {
               >
                 Language
               </label>
-              <SelectOptions data={language} />
+              <SelectOptions getSelect={getLanguage} data={language} />
             </div>
           </div>
 
@@ -76,7 +138,13 @@ const AddMovie = () => {
               >
                 Duration
               </label>
-              <SelectOptions data={genres} />
+              <input
+                type="text"
+                id="Duration"
+                onChange={(e) => setDuration(e.target.value)}
+                className="w-full h-full py-2 pl-4 border-none focus:ring-0 rounded-xl shadow-md text-dark font-light dark:bg-dark dark:shadow-darkShadow dark:text-white"
+                placeholder="Duration"
+              />
             </div>
 
             <div className="flex-1">
@@ -86,7 +154,7 @@ const AddMovie = () => {
               >
                 Audience
               </label>
-              <SelectOptions data={language} />
+              <SelectOptions getSelect={getAudience} data={genres} />
             </div>
           </div>
 
@@ -100,6 +168,7 @@ const AddMovie = () => {
             <input
               type="time"
               id="releaseDate"
+              onChange={(e) => setReleaseDate(e.target.value)}
               className="w-full h-full py-2 pl-4 border-none focus:ring-0 rounded-xl shadow-md text-dark font-light dark:bg-dark dark:shadow-darkShadow dark:text-white"
               placeholder="releaseDate"
             />
@@ -125,9 +194,7 @@ const AddMovie = () => {
                   alt="upload icon"
                 />
 
-                <p className="text-darkGray dark:text-slate-700">
-                  Drop poster here or
-                </p>
+                <p className="text-gray">Drop poster here or</p>
 
                 <p className="text-primary border-b border-primary">browse</p>
               </label>
@@ -136,6 +203,7 @@ const AddMovie = () => {
                 type="file"
                 name="selectPoster"
                 id="selectPoster"
+                onChange={(e) => setPoster(e.target.files[0])}
                 className="hidden"
               />
             </div>
@@ -157,9 +225,7 @@ const AddMovie = () => {
                   alt="upload icon"
                 />
 
-                <p className="text-darkGray dark:text-slate-700">
-                  Drop video here or
-                </p>
+                <p className="text-gray">Drop video here or</p>
 
                 <p className="text-primary border-b border-primary">browse</p>
               </label>
@@ -168,6 +234,7 @@ const AddMovie = () => {
                 type="file"
                 name="selectPoster"
                 id="selectPoster"
+                onChange={(e) => setTrailer(e.target.files[0])}
                 className="hidden"
               />
             </div>
@@ -183,6 +250,7 @@ const AddMovie = () => {
             <textarea
               name="Brief"
               id="Brief"
+              onChange={(e) => setBrief(e.target.value)}
               cols="20"
               rows="10"
               placeholder="Brief......"
@@ -192,7 +260,10 @@ const AddMovie = () => {
         </div>
       </div>
 
-      <Link to='/profile/show-days' className="ml-auto text-xl font-thin capitalize block w-fit py-2 px-10 bg-primary border border-primary transition duration-300 text-dark rounded-md hover:text-primary hover:bg-transparent">
+      <Link
+        to="/profile/show-days"
+        className="ml-auto text-xl font-thin capitalize block w-fit py-2 px-10 bg-primary border border-primary transition duration-300 text-dark rounded-md hover:text-primary hover:bg-transparent"
+      >
         next
       </Link>
     </section>

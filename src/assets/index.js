@@ -40,6 +40,9 @@ export { default as statusNotstartIcon } from "./icons/status_notstart.svg";
 export { default as statusStartIcon } from "./icons/status_start.svg";
 
 
+export { default as facebookIcon } from "./icons/facebook-app-symbol.png";
+export { default as twitterIcon } from "./icons/logo-twitter.svg";
+export { default as instagramIcon } from "./icons/logo-instagram.svg";
 
 
 // export images

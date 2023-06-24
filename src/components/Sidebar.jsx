@@ -15,6 +15,8 @@ import { setAsideBar } from "../app/reducers/appSlice";
 
 function Sidebar() {
   const { asideBar } = useSelector((state) => state.app);
+  const userData = JSON.parse(localStorage.getItem("user"));
+
   const dispatch = useDispatch();
 
   const handleAside = (e) => {
@@ -81,9 +83,9 @@ function Sidebar() {
                 }
               >
                 <img
-                  src={profileImg}
+                  src={userData.cover}
                   alt="admin icon"
-                  className="w-6 h-6 object-contain mr-3 rounded-full outline outline-1 outline-primary"
+                  className="w-6 h-6 object-cover mr-3 rounded-full border-2 border-primary"
                 />
 
                 <span className="font-light text-lg text-dark capitalize group-active:text-dark dark:text-white group-[]:dark:text-dark">

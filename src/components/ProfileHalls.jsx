@@ -3,39 +3,33 @@ import { editIcon } from "../assets";
 import AddHall from "./AddHall";
 import { hallOneChairs, hallTowChairs } from "./txt";
 import HallChairs from "./HallChairs";
+import { useSelector } from "react-redux";
 
 const ProfileHalls = () => {
-  const [activeTab, setActiveTab] = useState("hall1");
+  const [activeTab, setActiveTab] = useState("hall 1");
+  const { cinemaHalls } = useSelector((state) => state.app);
+
+  const getActiveHall = (value) => {
+    setActiveTab(value);
+  };
+
   return (
     <>
       <div className="flex items-center gap-4 mb-4">
         <div className="flex items-center flex-1 gap-2 rounded-xl py-1 px-2 sm:py-2 sm:px-4 shadow-md dark:shadow-darkShadow overflow-auto bg-white dark:bg-dark">
-          <button
-            className={`px-6 py-1 font-light rounded-lg border border-primary whitespace-nowrap transition-colors md:px-12 ${
-              activeTab === "hall1" ? "bg-primary text-dark" : "text-primary"
-            }`}
-            onClick={() => setActiveTab("hall1")}
-          >
-            Hall 1
-          </button>
-
-          <button
-            className={`px-6 py-1 font-light rounded-lg border border-primary whitespace-nowrap transition-colors md:px-12 ${
-              activeTab === "hall2" ? "bg-primary text-dark" : "text-primary"
-            }`}
-            onClick={() => setActiveTab("hall2")}
-          >
-            Hall 2
-          </button>
-
-          <button
-            className={`px-6 py-1 font-light rounded-lg border border-primary whitespace-nowrap transition-colors md:px-12 ${
-              activeTab === "hall3" ? "bg-primary text-dark" : "text-primary"
-            }`}
-            onClick={() => setActiveTab("hall3")}
-          >
-            Hall 3
-          </button>
+          {cinemaHalls.map((hall, index) => (
+            <button
+              className={`px-6 py-1 font-light rounded-lg border border-primary whitespace-nowrap transition-colors md:px-12 ${
+                activeTab === hall.hallName
+                  ? "bg-primary text-dark"
+                  : "text-primary"
+              }`}
+              key={index}
+              onClick={() => setActiveTab(hall.hallName)}
+            >
+              {hall.hallName}
+            </button>
+          ))}
         </div>
 
         <button
@@ -55,13 +49,16 @@ const ProfileHalls = () => {
       </div>
 
       {activeTab === "add" ? (
-        <AddHall />
-      ) : activeTab === "hall2" ? (
-        <HallChairs hallInChairs={hallTowChairs} />
-      ) : activeTab === "hall3" ? (
-        <HallChairs hallInChairs={hallOneChairs} />
+        <AddHall newHallAdded={getActiveHall} />
       ) : (
-        <HallChairs hallInChairs={hallOneChairs} />
+        <>
+          {cinemaHalls.map(
+            (hall, index) =>
+              hall.hallName === activeTab && (
+                <HallChairs key={index} hallInChairs={hall.seats} />
+              )
+          )}
+        </>
       )}
     </>
   );

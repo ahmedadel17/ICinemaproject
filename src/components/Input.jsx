@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { hidePass, viewPass } from "../assets";
 
-function Input({ id, label, type, inputclassName, placeholder }) {
+function Input({ id, label, type, inputclassName, placeholder, handleChange }) {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleViewPassword = (e) => {
@@ -12,7 +12,7 @@ function Input({ id, label, type, inputclassName, placeholder }) {
   return (
     <div className="mb-2 md:mb-4">
       <label
-        for={id}
+        htmlFor={id}
         className="inline-block mb-1 font-light text-base text-dark dark:text-white md:mb-2"
       >
         {label}
@@ -34,6 +34,7 @@ function Input({ id, label, type, inputclassName, placeholder }) {
         )}
 
         <input
+          onChange={(e) => handleChange(e.target.value)}
           type={
             type === "password" ? (showPassword ? "text" : "password") : type
           }
@@ -41,7 +42,8 @@ function Input({ id, label, type, inputclassName, placeholder }) {
           className={`
             w-full bg-gray-50 border border-gray-600 py-3 
             font-light text-dark text-sm rounded-lg 
-            focus:ring-primary focus:border-primary  
+            !ring-0
+           focus:border-primary  
             dark:bg-dark dark:text-white ${type === "password" && "pr-10"}
             ${inputclassName}
           `}
